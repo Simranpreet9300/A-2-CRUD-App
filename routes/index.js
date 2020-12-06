@@ -98,5 +98,20 @@ router.get('/facebook/callback', passport.authenticate('facebook', {
         res.redirect('/tasks')
     })
 
+// GET / Github/
+// Check if the User is already logged into/with Github, if not invoke then github Signin
+router.get('/github', passport.authenticate('github'),
+    (req, res) => { }
+)
+
+//Get / github/callback
+router.get('/github/callback', passport.authenticate('github', {
+    failureRedirect: '/login'
+}),
+    (req, res) => {
+        res.redirect('/tasks')
+    })
+
+
 
 module.exports = router;

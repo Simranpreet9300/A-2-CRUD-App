@@ -3,9 +3,13 @@
     "",
     "\\config",
     "\\models",
+    "\\public",
+    "\\public\\images",
+    "\\public\\javascripts",
     "\\routes",
     "\\views",
     "\\views\\tasks"
   ],
+  "SelectedNode": "\\routes\\index.js",
   "PreviewInSolutionExplorer": false
 }

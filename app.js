@@ -129,6 +129,44 @@ passport.use(new FacebookStrategy({
     }
 ))
 
+//Github Auth
+const GithubStrategy = require('passport-github2').Strategy
+
+passport.use(new GithubStrategy({
+    clientID: globals.ids.github.clientID,
+    clientSecret: globals.ids.github.clientSecret,
+    callbackURL: globals.ids.github.callbackURL
+},
+    (token, tokenSecret, profile, done) => {
+        //do we already have a user document in Mongo for this profile?
+        User.findOne({ oauthId: profile.id }, (err, user) => {
+            if (err) {
+                console.log(err) //error
+            }
+            if (!err && user != null) {
+                //facebook already exists in the MongoDB - just return the user object
+                done(null, user)
+            }
+            else {
+                //facebook user IS new, register them in MongoDB users collection!
+                user = new User({
+                    oauthId: profile.id,
+                    username: profile.displayName,
+                    oauthProvider: 'github',
+                    created: Date.now()
+                })
+                user.save((err) => {
+                    if (err) {
+                        console.log(err)
+                    }
+                    else {
+                        done(null, user)
+                    }
+                })
+            }
+        })
+    }
+))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -10,17 +10,17 @@ module.exports =
             //callbackURL: 'https://a-2-hospital-management.herokuapp.com/google/callback'
         },
         'facebook': {
-            clientID: '284983652946610',
-            clientSecret: '3dff81e1932f00fe9d6cb0f5e22d89ca',
+            clientID: '2241452869319986',
+            clientSecret: '51a3f6685988df8dd8e441fa5d1fec5b',
             callbackURL: 'http://localhost:3000/facebook/callback'
-            //callbackURL: 'nodemon'
+            //callbackURL: 'https://a-2-hospital-management.herokuapp.com/facebook/callback'
         },
 
-        /* 'github': {
-             clientID: '',
-             clientSecret: '',
+        'github': {
+             clientID: 'aac01a441f229be4fa4f',
+             clientSecret: 'a58679ba9ffbc582929d21e2950b025b93e9776e',
              callbackURL: 'http://localhost:3000/github/callback'
              //callbackURL: 'nodemon'
-         }*/
+         }
     }
 }
