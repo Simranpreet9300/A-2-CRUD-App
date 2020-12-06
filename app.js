@@ -9,6 +9,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var tasksRouter = require('./routes/tasks');
 
+//Ref for Auth
+const passport = require('passport')
+const session = require('express-session')
+
 var app = express();
 
 //Database try to connect and log a result
@@ -25,6 +29,26 @@ mongoose.connect(globals.db,  //Change test at the end to tasks-v2, and password
     ).catch(() => {
         console.log('No Connection to MongoDB')
     })
+
+//Passport Initialization
+//1. Configure app to manage sessions
+app.use(session({
+    secret: 'Assignment2',
+    resave: true,
+    saveUninitialized: false
+}))
+
+//2.  Set up Passport
+app.use(passport.initialize())
+app.use(passport.session())
+
+//3.  Link Passport to our User Model
+const User = require('./models/user')
+passport.use(User.createStrategy())
+
+//4. Set up Passport to Read /Write user data to the session object
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
