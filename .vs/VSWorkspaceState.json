@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\public\\javascripts",
-    "\\public\\stylesheets",
+    "\\config",
+    "\\models",
     "\\routes",
-    "\\views"
+    "\\views",
+    "\\views\\tasks"
   ],
   "PreviewInSolutionExplorer": false
 }

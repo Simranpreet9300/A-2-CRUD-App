@@ -1,0 +1,53 @@
+<h1> Edit Doctor Details</h1>
+
+<form method="post">
+    <fieldset class="form-group">
+        <label class="control-label col-md-2"> Doctor Name: *</label>
+        <input name="name" id="name" required value="{{ task.name }}" />
+    </fieldset>
+    <!--<fieldset class="form-group">
+        <label class="control-label col-md-2"> Complete: *</label>
+        <checkbox name="complete" id="complete" />
+    </fieldset>-->
+    <fieldset class="form-group">
+        <label class="control-label col-md-2">Specialties: *</label>
+        <input name="specialties" id="specialties" required value="{{ task.specialties }}" />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2">Gender: *</label>
+        <input name="gender" id="gender" required value="{{ task.gender }}" />
+    </fieldset>
+    <fieldset class="form-group">
+        <label class="control-label col-md-2"> Priority: *</label>
+        <select name="priority" id="priority">
+            <script>
+                //ref the selected element
+                var priority = document.getElementById('priority')
+                for (var i = 1; i <= 5; i++)
+                {
+                    //create a new option inside the select element
+                    var option = document.createElement('option')
+                    //display the current counter as athe new option text
+                    option.innerHTML = i.toString()
+                    //if the new option matches the task priority mark the option as selected
+                    if ({{task.priority}} == i.toString())
+                    {
+                        option.selected = true
+                    }
+                    //add new <option> element to the <select> object
+                    priority.append(option)
+                }
+            </script>
+        </select>
+    </fieldset>
+    <fieldset>
+        <label class="control-label col-md-2">Availability: </label>
+        {{#if task.complete}}
+        <input type="checkbox" id="available" name="available" checked="checked" />
+        {{else}}
+        <input type="checkbox" id="available" name="available" />
+        {{/if}}
+    </fieldset>
+    <input type="hidden" name="_id" id="_id" value="{{tasks._id}}" />
+    <button class="col-md-offset-2 btn btn-primary">Save</button>
+</form>
