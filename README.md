@@ -1,4 +1,4 @@
-# Hospital-Role-Management-System
+# Hospital Management System
 # A-2-CRUD-App
 
 The reason behind choosing this topic is, as everyone knows that it is the time of covid pandemic, hosiptal management plays important role in every place, so i choose this.
