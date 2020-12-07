@@ -1,3 +1,10 @@
+/*
+ * File name: user.js
+ * Author's name: Simranpreet Kaur (200427339)
+ * Website name: http://localhost:3000/ and https://a-2-hospital-management.herokuapp.com
+ * Description: This is the file that contains the data for user.
+ */
+
 const mongoose = require('mongoose')
 const plm = require('passport-local-mongoose')
 const User = new mongoose.Schema({

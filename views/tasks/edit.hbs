@@ -1,14 +1,16 @@
+<!--File name: edit.hbs
+Author's name: Simranpreet Kaur (200427339)
+Website name: http://localhost:3000/ and https://a-2-hospital-management.herokuapp.com
+ Description: This file contain the view for editing a existing information of doctor. -->
+
 <h1> Edit Doctor Details</h1>
 
+<!-- Edit Page Content -->
 <form method="post">
     <fieldset class="form-group">
         <label class="control-label col-md-2"> Doctor Name: *</label>
         <input name="name" id="name" required value="{{ task.name }}" />
     </fieldset>
-    <!--<fieldset class="form-group">
-        <label class="control-label col-md-2"> Complete: *</label>
-        <checkbox name="complete" id="complete" />
-    </fieldset>-->
     <fieldset class="form-group">
         <label class="control-label col-md-2">Specialties: *</label>
         <input name="specialties" id="specialties" required value="{{ task.specialties }}" />

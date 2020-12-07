@@ -1,4 +1,13 @@
+/*
+ * File name: index.js
+ * Author's name: Simranpreet Kaur (200427339)
+ * Website name: http://localhost:3000/ and https://a-2-hospital-management.herokuapp.com
+ * Description: This is the file that contains the express routes for all my views
+ */
+
+//link to the express package
 var express = require('express');
+//instanciates a new express route to handle http requests
 var router = express.Router();
 
 //ref for Auth

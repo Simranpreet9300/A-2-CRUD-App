@@ -1,3 +1,10 @@
+/*
+ * File name: tasks.js
+ * Author's name: Simranpreet Kaur (200427339)
+ * Website name: http://localhost:3000/ and https://a-2-hospital-management.herokuapp.com
+ * Description: This is the file which is the controller of models folder file i.e. task.js.
+ */
+
 ///////// TASK CONTROLLER /////////////////
 
 //set up routing with Express

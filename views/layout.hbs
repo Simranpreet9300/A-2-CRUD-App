@@ -1,10 +1,15 @@
+﻿<!--File name: layout.hbs
+Author's name: Simranpreet Kaur (200427339)
+Website name: http://localhost:3000/ and https://a-2-hospital-management.herokuapp.com
+ Description: This is the view for the main or "home" page or all pages -->
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>{{title}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Add Bootstrap-->
+    <!--Adding Bootstrap and Adding CDNs links-->
     <link rel='stylesheet' href="/stylesheets/bootstrap.min.css" />
     <link rel='stylesheet' href="/stylesheets/style.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,6 +22,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -54,6 +60,7 @@
 
     {{{body}}}
 
+    <!--Adding Javascript Bootstrap-->
     <script src="/javascripts/bootstrap.min.js"></script>
     <!--Added JQUERY-->
     <script src="/javascripts/jquery.min.js"></script>

@@ -1,3 +1,10 @@
+/*
+ * File name: app.js
+ * Author's name: Simranpreet Kaur (200427339)
+ * Website name: http://localhost:3000/ and https://a-2-hospital-management.herokuapp.com
+ * Description: This is the file that contains all functions and variables of Hospital Management.
+ */
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');

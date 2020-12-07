@@ -1,8 +1,17 @@
+/*
+File name: style.css
+Author's name: Simranpreet Kaur (200427339)
+Website name: http://localhost:3000/ and https://a-2-hospital-management.herokuapp.com
+Description: This is the stylesheet for the all pages.
+*/
+
+/*Body style for all pages*/
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+/*style for all hyperlink*/
 a {
   color: #00B7FF;
 }
