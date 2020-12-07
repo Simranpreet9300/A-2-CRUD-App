@@ -1,2 +1,17 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+<!--Adding partial header-->
+<div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+        <h2 class="w3-center">{{> header}}</h2><br>
+        <h3>Hi There!!</h3><br>
+        <p>It's a great pleasure to welcome you to our Hospital. Being a doctor it;s our responsibility to take care of our patients because medicines cure diseases, but only doctors can cure patients.</p><br>
+        <h3>"Taking your blessing and wishes into reality"</h3>
+    </div>
+    <div class="w3-col l6 w3-padding-large">
+        <!--Adding image-->
+        <!--From-- https://pixabay.com/illustrations/health-care-medicine-healthy-2082630/ -->
+        <img src="images/health.jpg" alt="hospital management">
+    </div>
+
+</div>

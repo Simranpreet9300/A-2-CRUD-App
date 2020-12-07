@@ -8,7 +8,7 @@ const User = require('../models/user')
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', {
-        title: 'Hospital Management System',
+        title: 'Hospital Management',
         user: req.user});
 });
 

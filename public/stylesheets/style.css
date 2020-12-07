@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*footer style for all pages*/
+footer {
+    background-color: #777; /*used for background color*/
+    padding: 10px;
+    text-align: center; /*used to set the position of text*/
+    color: white;
+    margin-top: 10px; /*used to set the top margin*/
+}
+
+.img-container {
+    text-align: center;
+}

@@ -13,7 +13,27 @@ var tasksRouter = require('./routes/tasks');
 const passport = require('passport')
 const session = require('express-session')
 
+var hbs = require('hbs');
+var fs = require('fs');
+
 var app = express();
+
+// Adding or registering partials.
+/*Partials example taken from http://stackoverflow.com/questions/8059914/express-js-hbs-module-register-partials-from-hbs-file */
+
+var partialsDir = __dirname + '/views/partials';
+
+var filenames = fs.readdirSync(partialsDir);
+
+filenames.forEach(function (filename) {
+    var matches = /^([^.]+).hbs$/.exec(filename);
+    if (!matches) {
+        return;
+    }
+    var name = matches[1];
+    var template = fs.readFileSync(partialsDir + '/' + filename, 'utf8');
+    hbs.registerPartial(name, template);
+});
 
 //Database try to connect and log a result
 const mongoose = require('mongoose')

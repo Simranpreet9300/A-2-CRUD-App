@@ -12,19 +12,25 @@
     </tr>
 
     {{#each tasks}}
-<tr>
-    <td> {{this.name}} </td>
-    <td> {{this.specialties}} </td>
-    <td> {{this.gender}} </td>
-    <td> {{this.available}} </td>
-    <td> {{this.priority}} </td>
-    <td>
-        <!--this._id is the MongoDB primary key for each specific task -->
-        <a href="/tasks/edit/{{ this._id }}"> Edit </a>|
-        <a href="/tasks/delete/{{ this._id }}" class="text-danger delete"> Delete </a>
-    </td>
-</tr>
+    <tr>
+        <td> {{this.name}} </td>
+        <td> {{this.specialties}} </td>
+        <td> {{this.gender}} </td>
+        <td> {{this.available}} </td>
+        <td> {{this.priority}} </td>
+        <td>
+            <!--this._id is the MongoDB primary key for each specific task -->
+            <a href="/tasks/edit/{{ this._id }}"> Edit </a>|
+            <a href="/tasks/delete/{{ this._id }}" class="text-danger delete"> Delete </a>
+        </td>
+    </tr>
 
     {{/each}}
 
 </table>
+
+<!--Adding image-->
+<!--From-- Image by <a href="https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2730772">Gordon Johnson</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2730772">Pixabay</a> -->
+<div class="img-container">
+    <img src="images/doctor.png" alt="doctor">
+</div>

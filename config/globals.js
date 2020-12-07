@@ -20,7 +20,7 @@ module.exports =
              clientID: 'aac01a441f229be4fa4f',
              clientSecret: 'a58679ba9ffbc582929d21e2950b025b93e9776e',
              callbackURL: 'http://localhost:3000/github/callback'
-             //callbackURL: 'nodemon'
+          
          }
     }
 }
